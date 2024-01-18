@@ -14,7 +14,7 @@ def main():
     print("end word report")
     print()
     print("start letter report")
-    for i in range(0,len(letter_list)):
+    for i in range(len(letter_list)-1,-1,-1):
         print(f'{letter_list[i][0]}x "{letter_list[i][1]}"')
     print("end letter report")
     print()
@@ -30,8 +30,7 @@ def alpha_sort(letter_counts):
         if letter.isalpha():
             tuple1 = (letter_counts[letter], letter)
             letter_list.append(tuple1)
-    letter_list.sort()
-    letter_list = letter_list[::-1] #reverse list
+    letter_list.sort() #how do i sort in descending?
     return letter_list
 
 def get_letter_counts(text):
