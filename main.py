@@ -24,11 +24,11 @@ def get_word_count(text):
     word_count = text.split()
     return len(word_count)
 
-def alpha_sort(letter_count):
+def alpha_sort(letter_counts):
     letter_list = []
-    for letter in letter_count:
+    for letter in letter_counts:
         if letter.isalpha():
-            tuple1 = (letter_count[letter], letter)
+            tuple1 = (letter_counts[letter], letter)
             letter_list.append(tuple1)
     letter_list.sort()
     letter_list = letter_list[::-1] #reverse list
